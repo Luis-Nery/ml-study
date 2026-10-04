@@ -2,7 +2,7 @@
 
 Learning in public: the path from applied AI engineering to research engineering on language models, with a focus on **evals, post-training and RL**.
 
-I work as an AI Solutions Architect, shipping RAG systems, evals and LLM integrations. This repo is where I rebuild the foundations underneath that work: the math, the neural network internals, and the engineering habits. Everything here is typed by hand.
+I work as an AI Solutions Architect, building RAG pipelines, rerankers, evals and internal AI tools in Python. This repo is where I rebuild the foundations underneath that work: the math, the neural network internals, and the engineering habits. Everything here is typed by hand.
 
 ## Path
 
