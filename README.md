@@ -22,7 +22,8 @@ A step is done when its checkpoint passes, not when the calendar says so. Checkp
 
 | Folder | What goes in it |
 |--------|-----------------|
-| [`python-refresher/`](python-refresher) | Tutorial examples, Exercism solutions, the 60-minute blank-file checkpoint |
+| [`python-refresher/`](python-refresher) | Tutorial notes and the 60-minute blank-file checkpoint |
+| [`exercism/`](exercism) | Exercism Python track: one folder per exercise, solved in VS Code against its pytest tests |
 | [`neetcode/`](neetcode) | Timed problems from the NeetCode 150, one file each, with the pattern noted at the top |
 | [`math-notes/`](math-notes) | Exercises and short write-ups in my own words: linear algebra, calculus, probability, information theory |
 | [`builds/`](builds) | 90-minute production-style builds with tests: key-value store, LRU cache, bank ledger, rate limiter |
