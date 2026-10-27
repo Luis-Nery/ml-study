@@ -24,65 +24,65 @@ pytest python-refresher/checkpoint -v
 
 ### Constructor: `Item(title, year)`
 
-- [ ] `title` must be a non-empty string, otherwise raise `ValueError`.
-- [ ] `year` must be an `int`, otherwise raise `ValueError`.
+- [x] `title` must be a non-empty string, otherwise raise `ValueError`. (Empty raises `ValueError`; a non-string raises `TypeError`, a deliberate choice.)
+- [x] `year` must be an `int`, otherwise raise `ValueError`. (Raises `TypeError` instead, a deliberate choice.)
 
 ### `describe()`
 
-- [ ] Returns a short string such as `"Dune (1965)"`.
+- [x] Returns a short string such as `"Dune (1965)"`.
 
 ### `__repr__`
 
-- [ ] Returns something like `Item('Dune', 1965)`.
-- [ ] Uses the real class name, so subclasses print their own name without overriding `__repr__`.
+- [x] Returns something like `Item('Dune', 1965)`.
+- [x] Uses the real class name, so subclasses print their own name without overriding `__repr__`.
 
 ## `Book(Item)`
 
 ### Constructor: `Book(title, year, author)`
 
-- [ ] Calls `super().__init__` so the parent's validation still runs.
+- [x] Calls `super().__init__` so the parent's validation still runs.
 
 ### `describe()`
 
-- [ ] Overrides the parent and adds the author, e.g. `"Dune (1965) by Frank Herbert"`.
-- [ ] Reuses the parent's text through `super().describe()` instead of rebuilding it.
+- [x] Overrides the parent and adds the author, e.g. `"Dune (1965) by Frank Herbert"`.
+- [x] Reuses the parent's text through `super().describe()` instead of rebuilding it.
 
 ## `Movie(Item)`
 
 ### Constructor: `Movie(title, year, minutes)`
 
-- [ ] `minutes` must be greater than 0, otherwise raise `ValueError`.
+- [x] `minutes` must be greater than 0, otherwise raise `ValueError`.
 
 ### `describe()`
 
-- [ ] Overrides the parent and adds the runtime, e.g. `"Alien (1979), 117 min"`.
+- [x] Overrides the parent and adds the runtime, e.g. `"Alien (1979), 117 min"`.
 
 ## `group_by_decade(items)`
 
 A plain function, not a method.
 
-- [ ] Takes a list of items (any mix of `Book` and `Movie`).
-- [ ] Returns a dict that maps each decade to a list of the titles from that decade, e.g. `{1960: ["Dune"], 1970: ["Alien", "Jaws"]}`.
-- [ ] Titles keep the order they had in the input list.
-- [ ] An empty list returns an empty dict.
+- [x] Takes a list of items (any mix of `Book` and `Movie`).
+- [x] Returns a dict that maps each decade to a list of the titles from that decade, e.g. `{1960: ["Dune"], 1970: ["Alien", "Jaws"]}`.
+- [x] Titles keep the order they had in the input list.
+- [x] An empty list returns an empty dict.
 
 ## `main()` and the main guard
 
-- [ ] `main()` builds a list with at least two books and two movies, prints each item's `describe()`, then prints the result of `group_by_decade`.
-- [ ] `main()` only runs with `python library.py`, not when pytest imports the file.
+- [x] `main()` builds a list with at least two books and two movies, prints each item's `describe()`, then prints the result of `group_by_decade`.
+- [x] `main()` only runs with `python library.py`, not when pytest imports the file.
 
 ## Tests (at least 3, one behavior per `test_` function)
 
-- [ ] `repr()` of a subclass shows the subclass name.
-- [ ] `group_by_decade` returns the right dict for a small mixed list.
-- [ ] One invalid input raises `ValueError` (use `pytest.raises`).
+- [x] `repr()` of a subclass shows the subclass name.
+- [x] `group_by_decade` returns the right dict for a small mixed list.
+- [x] One invalid input raises `ValueError` (use `pytest.raises`). (Tests a non-string title, which raises `TypeError`.)
 
 ## Done when
 
-- [ ] Finished inside 1 hour from a blank file.
-- [ ] `pytest -v` passes every test.
-- [ ] `python library.py` runs the demo.
-- [ ] Running `pytest` does not run the demo.
+- [ ] Finished inside 1 hour from a blank file. (Practice run: had AI help. Redo from a new blank file.)
+- [x] `pytest -v` passes every test.
+- [x] `python library.py` runs the demo.
+- [x] Running `pytest` does not run the demo.
 
 ## Optional extras (only if time is left)
 
@@ -96,6 +96,3 @@ A plain function, not a method.
 2. Pythonic style: snake_case, `super()`, f-strings, `type(self).__name__`, no Java-isms.
 3. Tests: does each test check one thing, and would it catch a real bug?
 
-## What went wrong
-
-(Fill in after the attempt: what you got stuck on, what you had to look up, how long it took.)
