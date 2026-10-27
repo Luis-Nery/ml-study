@@ -11,18 +11,18 @@ When you are done, ask for a review of both files.
 | `accounts.py` | The three classes, a `main()` with a short demo, and a main guard |
 | `test_accounts.py` | Your pytest tests |
 
-Run from the repo root (`ml-study/`) or from this folder:
+Run from the repo root (`ml-study/`):
 
 ```
-python python-refresher/accounts.py
-pytest python-refresher -v
+python python-refresher/accounts-task/accounts.py
+pytest python-refresher/accounts-task -v
 ```
 
 ## `Account` (base class)
 
 ### Constructor: `Account(owner, balance=0)`
 
-- [x] `owner` must be a non-empty string, otherwise raise `ValueError`.
+- [ ] `owner` must be a non-empty string, otherwise raise `ValueError`. (Empty is rejected, but `Account(123)` is still accepted: add a type check.)
 - [x] A negative starting `balance` raises `ValueError`.
 
 ### `balance`: read-only property
@@ -84,23 +84,23 @@ pytest python-refresher -v
 
 ## Tests (at least 8, one behavior per `test_` function)
 
-- [ ] A new account stores the owner and the balance.
-- [ ] `deposit` increases the balance and returns it.
-- [ ] Depositing 0 or a negative amount raises `ValueError`.
-- [ ] Withdrawing more than the balance from an `Account` raises `ValueError`.
-- [ ] Assigning to `balance` raises `AttributeError`.
-- [ ] `SavingsAccount.add_interest()` gives the right result. Pick exact numbers, like 1000 at 0.05.
-- [ ] The 4th savings withdrawal raises `ValueError`.
-- [ ] A checking account can go negative within its overdraft, but not past it.
-- [ ] `repr()` of each class shows the correct class name.
+- [x] A new account stores the owner and the balance.
+- [x] `deposit` increases the balance and returns it.
+- [x] Depositing 0 or a negative amount raises `ValueError`.
+- [x] Withdrawing more than the balance from an `Account` raises `ValueError`.
+- [x] Assigning to `balance` raises `AttributeError`.
+- [x] `SavingsAccount.add_interest()` gives the right result. Pick exact numbers, like 1000 at 0.05.
+- [x] The 4th savings withdrawal raises `ValueError`.
+- [x] A checking account can go negative within its overdraft, but not past it.
+- [x] `repr()` of each class shows the correct class name.
 
 Use `pytest.raises(SomeError)` for the error cases.
 
 ## Done when
 
-- [ ] `pytest -v` passes every test.
+- [x] `pytest -v` passes every test.
 - [x] `python accounts.py` runs the demo.
-- [ ] Running `pytest` does not run the demo.
+- [x] Running `pytest` does not run the demo.
 
 ## Optional extras
 
